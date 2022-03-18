@@ -1,0 +1,79 @@
+﻿[
+  {
+    "Id": 1,
+    "CardName": "Jade",
+    "Description": "Gain 2 Mana",
+    "Cost": 2,
+    "IsBasic": false,
+    "Count": 7,
+    "TypeId": 2,
+    "VersionId": 1,
+    "HeroId": null
+  },
+  {
+    "Id": 2,
+    "CardName": "Sifter's Pearl",
+    "Description": "Gain 2 Mana. Each player (yourself included) reveals the top card of their deck and either discards it or returns it to the top of their deck.",
+    "Cost": 3,
+    "IsBasic": false,
+    "Count": 7,
+    "TypeId": 2,
+    "VersionId": 1,
+    "HeroId": null
+  },
+  {
+    "Id": 3,
+    "CardName": "V'riswood Amber,",
+    "Description": "When you gain this, you may place it on top of your deck. Gain 2 Mana",
+    "Cost": 3,
+    "IsBasic": false,
+    "Count": 7,
+    "TypeId": 2,
+    "VersionId": 1,
+    "HeroId": null
+  },
+  {
+    "Id": 4,
+    "CardName": "Diamond Cluster",
+    "Description": "Gain 2 Mana. If this is the second time you have played Diamond Cluster this turn, gain an additional 2 Mana.",
+    "Cost": 4,
+    "IsBasic": false,
+    "Count": 7,
+    "TypeId": 2,
+    "VersionId": 1,
+    "HeroId": null
+  },
+  {
+    "Id": 5,
+    "CardName": "Searing Ruby",
+    "Description": "Gain 2 Mana. Gain an additional 1 Mana that can only be used to gain a spell.",
+    "Cost": 4,
+    "IsBasic": false,
+    "Count": 7,
+    "TypeId": 2,
+    "VersionId": 1,
+    "HeroId": null
+  },
+  {
+    "Id": 6,
+    "CardName": "Burning Opal",
+    "Description": "Gain 3 Mana. You may discard one card from your hand. If you do, any one ally draws a card.",
+    "Cost": 5,
+    "IsBasic": false,
+    "Count": 7,
+    "TypeId": 2,
+    "VersionId": 1,
+    "HeroId": null
+  },
+  {
+    "Id": 7,
+    "CardName": "Clouded Sapphire",
+    "Description": "Gain 3 Mana. If this is the first time you have played Clouded Sapphire this turn, any one ally gains 1 charge.",
+    "Cost": 6,
+    "IsBasic": false,
+    "Count": 7,
+    "TypeId": 2,
+    "VersionId": 1,
+    "HeroId": null
+  }
+] 

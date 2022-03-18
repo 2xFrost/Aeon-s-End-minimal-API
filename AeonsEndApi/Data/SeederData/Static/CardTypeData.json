@@ -1,0 +1,14 @@
+﻿[
+  {
+    "Id": 1,
+    "Type": "Spell"
+  },
+  {
+    "Id": 2,
+    "Type": "Crystal"
+  },
+  {
+    "Id": 3,
+    "Type": "Artefact"
+  }
+]
