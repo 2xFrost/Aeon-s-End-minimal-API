@@ -12,7 +12,7 @@ public static class DataSeed
         SeedVersions(path);
         //SeedNemeses(path);
         //SeedHeros(path); 
-        //SeedCards(path);                          
+        SeedCards(path);                          
     }
     private static void SeedCardTypes(string path)
     {
@@ -20,7 +20,7 @@ public static class DataSeed
         {
             if (!db.CardTypes.Any())
             {
-                List<CardType> types = Deserialize<CardType>("CardTypeDataTest.json",path);
+                List<CardType> types = Deserialize<CardType>("CardTypeData.json", path);
                 db.CardTypes.AddRange(types);
                 db.SaveChanges();
             }
@@ -32,7 +32,7 @@ public static class DataSeed
         {
             if (!db.GameVersions.Any())
             {
-                List<GameVersion> versions = Deserialize<GameVersion>("GameVersionDataTest.json", path);
+                List<GameVersion> versions = Deserialize<GameVersion>("GameVersionData.json", path);
                 db.GameVersions.AddRange(versions);
                 db.SaveChanges();
             }
@@ -68,10 +68,9 @@ public static class DataSeed
         {
             if (db.Cards.Count() == 0)
             {
-                List<Card> cardList = Deserialize<Card>("TestData.json", path);
+                List<Card> cardList = Deserialize<Card>("CardData.json", path);
                 db.Cards.AddRange(cardList);
                 db.SaveChanges();
-                Console.WriteLine("Tabel seeded properly");
             }
         }
     }

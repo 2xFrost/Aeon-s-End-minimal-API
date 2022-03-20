@@ -5,7 +5,7 @@ public static class Services
     public static void BuilderServices(this WebApplicationBuilder builder)
     {
         builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen();
+        builder.Services.AddSwaggerGen();                      
 
         builder.Services.AddScoped<ICardHelper, CardHelper>();
         builder.Services.AddScoped<IGameVersionHelper, GameVersionHelper>();

@@ -1,5 +1,6 @@
 ﻿global using AeonsEndApi.Utilites.Interfaces;
-global using Data.Model;
-global using Data.DBAccess;
-global using Data.ModelHelper;
+global using AeonsEndApi.Data.Model;
+global using AeonsEndApi.Data.DBAccess;
+global using AeonsEndApi.Data.ModelHelper;
 global using Microsoft.EntityFrameworkCore;
+global using System.Text.Json.Serialization;

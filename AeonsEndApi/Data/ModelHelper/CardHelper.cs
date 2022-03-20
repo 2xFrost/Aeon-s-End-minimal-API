@@ -1,6 +1,4 @@
-﻿using AeonsEndApi.Utilites.Interfaces;
-
-namespace Data.ModelHelper;
+﻿namespace AeonsEndApi.Data.ModelHelper;
 
 public class CardHelper : ICardHelper
 {

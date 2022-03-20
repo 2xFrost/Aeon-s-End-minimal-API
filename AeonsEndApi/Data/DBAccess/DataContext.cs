@@ -1,8 +1,9 @@
-﻿namespace Data.DBAccess;
+﻿namespace AeonsEndApi.Data.DBAccess;
 
 public class DataContext : DbContext
 {
     public DbSet<Card> Cards { get; set; }
+
     public DbSet<CardType> CardTypes { get; set; }
     public DbSet<GameVersion> GameVersions { get; set; }
     public DbSet<Hero> Heroes { get; set; }
@@ -20,10 +21,10 @@ public class DataContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Card>().ToTable("Cards");
         modelBuilder.Entity<CardType>().ToTable("CardTypes");
+        modelBuilder.Entity<Card>().ToTable("Cards");
         modelBuilder.Entity<GameVersion>().ToTable("GameVersions");
         modelBuilder.Entity<Hero>().ToTable("Heroes");
-        modelBuilder.Entity<Nemezis>().ToTable("Nemeses");           
+        modelBuilder.Entity<Nemezis>().ToTable("Nemeses");
     }
 }

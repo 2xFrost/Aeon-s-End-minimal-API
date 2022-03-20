@@ -1,4 +1,4 @@
-﻿namespace Data.ModelHelper;
+﻿namespace AeonsEndApi.Data.ModelHelper;
 
 public class NemezisHelper : INemezisHelper
 {
