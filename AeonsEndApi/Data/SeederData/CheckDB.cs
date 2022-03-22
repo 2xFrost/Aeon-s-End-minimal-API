@@ -15,9 +15,8 @@ public static class CheckDB
         }
 
         bool existCheck = dbExistsCheck();
-        bool connectionCheck = dbConnectionCheck();
 
-        if (!existCheck && !connectionCheck)
+        if (!existCheck)
         {
             dbCreation();
             DataSeed.SeedData();
@@ -36,13 +35,6 @@ public static class CheckDB
         using (var db = new DataContext())
         {
             return db.Database.GetService<IRelationalDatabaseCreator>().Exists();
-        }
-    }
-    private static bool dbConnectionCheck()
-    {
-        using (var db = new DataContext())
-        {
-            return db.Database.CanConnect();
         }
     }
 }
