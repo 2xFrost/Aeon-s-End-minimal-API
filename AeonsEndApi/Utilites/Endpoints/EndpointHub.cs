@@ -4,9 +4,11 @@ public static class EndpointHub
 {
     public static WebApplication EndpointsHub(this WebApplication app)
     {
+        #region
         app.MapGet("/api/cards", EndpointHub.GetAllCards);
-        app.MapGet("/api/cards/{id}", EndpointHub.GetCardById);
-
+        //app.MapGet("/api/cards/{id}", EndpointHub.GetCardById);
+        app.MapGet("api/cards/{name}", EndpointHub.GetCardByName);
+        #endregion
         app.MapGet("/api/heroes", EndpointHub.GetAllHeroes);
         app.MapGet("/api/heroes/{id}", EndpointHub.GetHeroById);
 
@@ -26,6 +28,14 @@ public static class EndpointHub
     private static IResult GetCardById(ICardHelper cardHelper, int id)
     {
         var card = cardHelper.GetCardById(id);
+        if (card == null) return Results.NotFound();
+
+        return Results.Ok(card);
+    }
+
+    private static IResult GetCardByName(ICardHelper cardHelper, string name)
+    {
+        var card = cardHelper.GetCardByName(name);
         if (card == null) return Results.NotFound();
 
         return Results.Ok(card);

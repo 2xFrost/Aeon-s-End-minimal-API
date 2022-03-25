@@ -9,16 +9,10 @@ public class Card
     public bool IsBasic { get; set; }
     public int? AmmountInHand { get; set; }
     public int? MarketAmmount { get; set; }
-
-
-    //navigation
-    [JsonIgnore]
     public CardType Type { get; set; }
-    public int TypeId { get; set; }
-    [JsonIgnore]
+    public int TypeId { get; set; }   
     public GameVersion GameVersion { get; set; }
-    public int GameVersionId { get; set; }
-    [JsonIgnore]
+    public int GameVersionId { get; set; }    
     public Hero Hero { get; set; }
     public int? HeroId { get; set; }
 }

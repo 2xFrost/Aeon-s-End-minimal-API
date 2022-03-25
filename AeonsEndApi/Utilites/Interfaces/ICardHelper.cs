@@ -1,7 +1,10 @@
-﻿namespace AeonsEndApi.Utilites.Interfaces;
+﻿using AeonsEndApi.Data.Dto;
+
+namespace AeonsEndApi.Utilites.Interfaces;
 
 public interface ICardHelper
 {
-    List<Card> GetAllCards();
-    Card GetCardById(int id);
+    List<CardDto> GetAllCards();
+    CardDto GetCardById(int id);
+    CardDto GetCardByName(string name);
 }
