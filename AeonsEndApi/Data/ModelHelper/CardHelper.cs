@@ -69,11 +69,46 @@ public class CardHelper : ICardHelper
             return cardDto;
         }
     }
+
+    public List<CardDto> GetHeroUniqueCards(string heroName)
+    {
+        int id = 0;
+
+        CheckHeroId(ref id, heroName);
+
+        using (var db = new DataContext())
+        {
+            var cardDto = (from card in db.Cards
+                           join type in db.CardTypes
+                           on card.TypeId equals type.Id
+                           join hero in db.Heroes
+                           on card.HeroId equals hero.Id
+                           where card.HeroId == id
+                           select new CardDto
+                           {
+                               CardName = card.CardName,
+                               CardType = type.Name,
+                               Cost = card.Cost,
+                               AmmountInHand = card.AmmountInHand,
+                               MarketAmmount = card.MarketAmmount,
+                               Description = card.Description
+                           }).ToList();
+            return cardDto;
+        }
+    }
     private static void SearchCardId(int id, ref Card card)
     {
         using (var db = new DataContext())
         {
             card = db.Cards.Find(id);
+        }
+    }
+    private static void CheckHeroId(ref int id, string heroName)
+    {
+        using(var db = new DataContext()) 
+        {
+            var hero = db.Heroes.Where(h => h.Name == heroName).FirstOrDefault();
+            if (hero != null) id = hero.Id;            
         }
     }
 }

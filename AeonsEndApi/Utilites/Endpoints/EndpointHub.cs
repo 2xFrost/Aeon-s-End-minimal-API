@@ -21,7 +21,7 @@ public static class EndpointHub
         return app;
     }
 
-    public static IResult GetAllCards(ICardHelper cardHelper)
+    private static IResult GetAllCards(ICardHelper cardHelper)
     {
         return Results.Ok(cardHelper.GetAllCards());
     }
